@@ -13,9 +13,13 @@
 }
 
 body {
-  font-family: "roboto", sans-serif;
+  font-family: "ubuntu", sans-serif;
   background-color: var(--bg);
   /* color: #fff; */
+  background-image: url("/img/bg.png");
+  background-size: cover; /* Untuk menutupi seluruh area elemen body */
+  background-position: center; /* Untuk mengatur posisi gambar ke tengah */
+  background-repeat: no-repeat; /* Untuk mencegah pengulangan gambar */
 }
 
 /* Navbar */
@@ -25,13 +29,18 @@ body {
   align-items: center;
   display: flex;
   justify-content: center; /* align horizontal */
-  border-bottom: 1px solid #e0e1e6;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   padding: 0.8rem 7%; /* Mengurangi padding atas dan bawah */
   z-index: 9999;
+}
+
+.navbar.scrolled {
+  background-color: #fff; /* Mengubah warna latar belakang menjadi putih */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan box shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Animasi transisi */
 }
 
 .navbar .navbar-logo {
@@ -75,11 +84,66 @@ body {
 #hamburger-menu {
   display: none;
 }
+
+/* Main(content) */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 104px;
+}
+
+.col {
+  /* background-color: #f1f1f1; */
+  width: 40%;
+  margin: 45px;
+  /* border: solid 1px; */
+  /* line-height: 75px; */
+}
+
+.container .col .title {
+  font-size: 96px;
+  color: var(--primary);
+}
+
+.container .col .text {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.container .col img {
+  max-width: 100%;
+}
+
 /* Media Queries */
 /* Laptop */
-@media (max-width: 1366px) {
+@media (max-width: 1100px) {
   html {
-    font-size: 75%;
+    font-size: 85%;
+  }
+
+  /* main */
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col {
+    width: 80%; /* Mengubah lebar kolom */
+    margin: 20px 0; /* Mengurangi margin atas dan bawah */
+    text-align: center; /* Mengatur teks menjadi rata tengah */
+  }
+
+  .container .col .title {
+    font-size: 58px; /* Mengurangi ukuran font judul */
+  }
+
+  .container .col .text {
+    font-size: 28px; /* Mengurangi ukuran font teks */
+  }
+
+  .container .col img {
+    width: 100%; /* Mengubah lebar gambar menjadi penuh */
+    height: auto; /* Mengatur ketinggian gambar agar proporsional */
   }
 }
 
@@ -89,9 +153,9 @@ body {
     font-size: 62.5%;
   }
 
-  .navbar {
-    justify-content: flex-start; /* Menggeser elemen ke kiri */
-  }
+  /* .navbar {
+    justify-content: flex-start;
+  } */
 
   .navbar-logo {
     display: flex;
@@ -130,6 +194,31 @@ body {
 
   #hamburger-menu:hover {
     color: #05afaa;
+  }
+
+  /* main */
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col {
+    width: 80%; /* Mengubah lebar kolom */
+    margin: 20px 0; /* Mengurangi margin atas dan bawah */
+    text-align: center; /* Mengatur teks menjadi rata tengah */
+  }
+
+  .container .col .title {
+    font-size: 48px; /* Mengurangi ukuran font judul */
+  }
+
+  .container .col .text {
+    font-size: 18px; /* Mengurangi ukuran font teks */
+  }
+
+  .container .col img {
+    width: 100%; /* Mengubah lebar gambar menjadi penuh */
+    height: auto; /* Mengatur ketinggian gambar agar proporsional */
   }
 }
 
