@@ -1,0 +1,141 @@
+:root {
+  --primary: #10405a;
+  --bg: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+  background-color: var(--bg);
+  /* color: #fff; */
+}
+
+/* Navbar */
+.navbar {
+  justify-content: space-between;
+  padding: 1.4rem 7%;
+  align-items: center;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  border-bottom: 1px solid #e0e1e6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.8rem 7%; /* Mengurangi padding atas dan bawah */
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.navbar .navbar-logo img {
+  width: 20%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.navbar a img.logo {
+  width: 43px;
+  margin-right: 10px;
+}
+
+.navbar a span {
+  font-weight: bold;
+}
+.navbar .navbar-nav {
+  margin: 0 auto;
+}
+
+.navbar-nav a {
+  margin-right: 10px;
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a:hover {
+  color: #05afaa;
+}
+
+.navbar .navbar-extra {
+  margin-left: auto;
+}
+
+#hamburger-menu {
+  display: none;
+}
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .navbar {
+    justify-content: flex-start; /* Menggeser elemen ke kiri */
+  }
+
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+    font-weight: bold;
+    text-align: left; /* Menjadikan teks pada .navbar-logo menjadi kiri */
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #f4cd0c;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #4a748b;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: small;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+    color: var(--primary);
+  }
+
+  #hamburger-menu:hover {
+    color: #05afaa;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
