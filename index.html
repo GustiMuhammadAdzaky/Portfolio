@@ -12,8 +12,8 @@
 
 <body>
   <nav class="navbar">
-    <a href="img/logo.jpeg" class="navbar-logo">
-      <img class="logo" src="img/logo.jpeg" alt="Logo">
+    <a href="img/logo.jpeg" class="navbar-logo scrolled">
+      <img class="logo" style="width: 5%;" src="img/logo.jpeg" alt="Logo">
       <span>Gusti Muhammad Adzaky</span>
     </a>
     <div class="navbar-nav">
@@ -27,19 +27,104 @@
     </div>
   </nav>
   <main class="content">
-    <div class="container">
-      <div class="col">
-        <h1 class="title">Portfolio</h1>
-        <p class="text">Dengan keahlian dalam pengembangan perangkat lunak, saya siap membantu Anda mencapai tujuan
-          teknis. Mari berkolaborasi untuk solusi yang sesuai dengan kebutuhan Anda.</p>
+
+
+    <!-- jumbotron -->
+    <section class="jumbotron">
+      <div class="container">
+        <div class="col">
+          <h1 class="title">Portfolio</h1>
+          <p class="text">Dengan keahlian dalam pengembangan perangkat lunak, saya siap membantu Anda mencapai tujuan
+            teknis. Mari berkolaborasi untuk solusi yang sesuai dengan kebutuhan Anda.</p>
+        </div>
+        <div class="col">
+          <img src="/img/zaky.png" width="100%">
+          <!-- <img src="/img/margalas.png" width="200px" height="auto" alt=""> -->
+        </div>
       </div>
-      <div class="col">
-        <img src="/img/margalas.png" width="723px" alt="">
-        <!-- <img src="/img/margalas.png" width="200px" height="auto" alt=""> -->
+    </section>
+
+    <!-- grid -->
+    <section class="grid">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="web">Web Developer</button>
+        <button class="filter-btn" data-filter="mobile">Mobile Developer</button>
       </div>
-    </div>
+      <div class="items-container">
+        <div class="item web">
+          <a href="https://github.com/GustiMuhammadAdzaky/marga-las">
+            <img src="/img/margalass.png" alt="">
+            <div class="overlay">Toko Online| Margalas</div>
+          </a>
+        </div>
+        <div class="item web">
+          <a href="https://github.com/GustiMuhammadAdzaky/cetering-gizi-RSUD_Instalasi_Gizi">
+            <img src="/img/cetering.png" alt="">
+            <div class="overlay">Ketering Gizi RSUD Prof. Dr. Margono Soekarjo</div>
+          </a>
+        </div>
+        <div class="item web">
+          <a href="https://github.com/GustiMuhammadAdzaky/Food-Shop">
+            <img src="/img/foodshop.png" alt="">
+            <div class="overlay">Food Shop</div>
+          </a>
+        </div>
+        <div class="item web">
+          <a href="https://github.com/GustiMuhammadAdzaky/Food-Shop">
+            <img src="/img/toko-online.png" alt="">
+            <div class="overlay">Open Source Toko Online</div>
+          </a>
+        </div>
+        <div class="item web">
+          <a href="https://github.com/GustiMuhammadAdzaky/Wedding-Code-Igniter-4">
+            <img src="/img/weddings.png" alt="">
+            <div class="overlay">Web Wedding Invitation | Sidoi Nikah</div>
+          </a>
+        </div>
+        <div class="item web">
+          <a href="https://github.com/GustiMuhammadAdzaky/qara-a-podcast">
+            <img src="/img/tsp.png" alt="">
+            <div class="overlay">Optimasi TSP menggunakan Algoritma Genetika</div>
+          </a>
+        </div>
+        <div class="item mobile">
+          <a href="https://github.com/GustiMuhammadAdzaky/qara-a-podcast">
+            <img src="/img/podcast.png" alt="">
+            <div class="overlay">Fitur Podcast qara'a | Pt Putra Kreasi Hotama</div>
+          </a>
+        </div>
+        <div class="item mobile">
+          <a href="https://github.com/GustiMuhammadAdzaky/qara-a">
+            <img src="/img/fitur.png" alt="">
+            <div class="overlay">Fitur 25 Nabi qara'a | Pt Putra Kreasi Hotama</div>
+          </a>
+        </div>
+        <div class="item mobile">
+          <a href="https://github.com/GustiMuhammadAdzaky/KedaiCakeYuli">
+            <img src="/img/e-commers.png" alt="">
+            <div class="overlay">Toko Online | Kedaicakeyuli</div>
+          </a>
+        </div>
+        <div class="item mobile">
+          <a href="https://github.com/GustiMuhammadAdzaky/SkinCareApp">
+            <img src="/img/skincare.png" alt="">
+            <div class="overlay">Aplikasi Penjualan Skincare | Kina Skin Care</div>
+          </a>
+        </div>
+        <div class="item mobile">
+          <a href="https://github.com/GustiMuhammadAdzaky/SewaCameraApp">
+            <img src="/img/camera.png" alt="">
+            <div class="overlay">Aplikasi Sewa Kamera | Desy Camera</div>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <div style="height: 1000px;"></div>
+
   </main>
-  <div style="height: 1000px;"></div>
 </body>
 <script src="js/script.js"></script>
 <script>
