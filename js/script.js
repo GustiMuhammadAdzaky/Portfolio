@@ -1,7 +1,9 @@
 let hamburgerMenu = document.getElementById("hamburger-menu");
 let navbarNav = document.querySelector(".navbar-nav");
+
 hamburgerMenu.addEventListener("click", function (e) {
   navbarNav.classList.toggle("active");
+  e.preventDefault(); // Menahan perilaku default dari tautan
 });
 
 // jika menekan yang bukan dari sidebar, maka tombol active akan hilang
@@ -81,5 +83,3 @@ document.addEventListener("click", function (e) {
     });
   }
 });
-
-// console.log(filterButtons);
