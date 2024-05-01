@@ -78,6 +78,7 @@ body {
 
 .navbar .navbar-nav a:hover {
   color: #05afaa;
+  border-bottom: solid 2px #05afaa;
 }
 
 .navbar .navbar-extra {
@@ -89,30 +90,33 @@ body {
 }
 
 /* Main(content) */
+section.jumbotron {
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
 .container {
   display: flex;
-  /* flex-wrap: wrap; */
-  margin: 40px;
-  margin-top: 104px;
+  justify-content: center;
+  margin: 40px auto 0;
+  max-width: 1200px;
 }
 
 .col {
-  /* background-color: #f1f1f1; */
   width: 40%;
-  margin: 55px;
-  /* border: solid 1px; */
-  /* line-height: 75px; */
+  margin: 0 20px;
+  /* text-align; */
 }
 
 .container .col .title {
-  font-size: 90px;
+  font-size: 60px; /* Memperbesar ukuran judul */
   color: var(--primary);
+  margin-bottom: 30px; /* Menambah jarak antara judul dan teks */
 }
 
 .container .col .text {
-  font-size: 25px;
+  font-size: 24px; /* Memperbesar ukuran teks */
   color: var(--primary);
-  line-height: 40px;
+  line-height: 36px; /* Meningkatkan jarak antara baris teks */
 }
 
 .container .col img {
@@ -121,7 +125,6 @@ body {
 
 /* Grid */
 
-/* filter buttons */
 /* filter buttons */
 .filter-buttons {
   display: flex;
@@ -133,12 +136,14 @@ body {
 
 .filter-buttons button {
   margin-right: 10px;
-  border-radius: 10px;
-  padding: 5px;
+  border-radius: 22px;
   border: solid 1px var(--primary);
   color: #10405a;
   background-color: white;
-  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   transition: background-color 0.3s, color 0.3s; /* tambahkan transisi untuk perubahan warna latar belakang dan teks */
 }
 
@@ -225,14 +230,71 @@ body {
   color: inherit; /* Mewarisi warna teks dari parent */
 }
 
+/* card */
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #05afaa;
+  width: 80%;
+  border-radius: 30px;
+  margin-top: -100px !important;
+}
+
+.cards .container .col {
+  flex: 1;
+  margin-left: 30px;
+  margin-top: 40px;
+  /* border: solid 3px red; */
+}
+
+.cards .container .col .title {
+  font-size: 61px;
+  color: #fff;
+}
+
+.cards .container .col .text {
+  font-size: 16px;
+}
+.cards .container .col button {
+  background-color: #f4cd0c;
+  color: #10405a;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: auto;
+  padding: 20px;
+}
+
+.cards .container button:hover {
+  background-color: #d9b809;
+}
+
+.button-container {
+  display: flex;
+  align-items: center; /* Untuk membuat teks dan ikon sejajar secara vertikal */
+}
+
+.button-container .icon {
+  margin-left: 5px; /* Jarak antara teks dan ikon */
+}
+
 /* info section */
 .info {
-  margin-top: 400px;
+  margin-top: 250px;
   background-color: #07324a;
 }
 
 .container-info {
-  padding-top: 250px;
+  padding-top: 50px;
 }
 
 section.info .container {
@@ -336,12 +398,12 @@ section.info .container .col p span {
   }
 
   .container .col .title {
-    font-size: 58px; /* Mengurangi ukuran font judul */
+    /* font-size: 50px; */
     text-align: left;
   }
 
   .container .col .text {
-    font-size: 32px; /* Mengurangi ukuran font teks */
+    /* font-size: 14px;  */
     text-align: left;
   }
 
