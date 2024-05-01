@@ -83,3 +83,21 @@ document.addEventListener("click", function (e) {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".item");
+
+  items.forEach((item) => {
+    const img = item.querySelector("img");
+    const overlay = item.querySelector(".overlay");
+
+    img.addEventListener("load", function () {
+      overlay.classList.remove("loading");
+    });
+
+    img.addEventListener("error", function () {
+      overlay.classList.remove("loading");
+      overlay.innerHTML = "Error loading image"; // Teks alternatif jika gambar gagal dimuat
+    });
+  });
+});

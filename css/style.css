@@ -208,6 +208,11 @@ section.jumbotron {
   transition: opacity 0.3s ease; /* Animasi opacity saat hover */
 }
 
+.item .overlay.loading::after {
+  content: "Loading..."; /* Teks atau lambang loading */
+  /* Gaya tambahan untuk menyesuaikan tampilan loading */
+}
+
 .item:hover .overlay {
   opacity: 1;
 }
