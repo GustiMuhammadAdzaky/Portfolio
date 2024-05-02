@@ -6,9 +6,10 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://unpkg.com/feather-icons"></script>
-
   <link rel="icon" href="img/circle-logo.png" />
 </head>
+
+
 
 <body>
   <nav class="navbar">
@@ -17,10 +18,9 @@
       <span>Gusti Muhammad Adzaky</span>
     </a>
     <div class="navbar-nav">
-      <a href="#">Portfolio</a>
-      <a href="#">Tentang Saya</a>
-      <a href="#">Pendidikan</a>
-      <a href="#">Kontak</a>
+      <a href="#" id="about">Tentang Saya</a>
+      <a href="#" id="education">Pendidikan</a>
+      <a href="#" id="contact">Kontak</a>
     </div>
     <div class="navbar-extra">
       <a href="#" id="hamburger-menu"><i data-feather="align-right"></i></a>
@@ -125,6 +125,33 @@
 
 
 
+  <!-- Modal -->
+  <div id="modal-container">
+    <div class="modal" id="about-modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Tentang Saya</h2>
+      </div>
+    </div>
+    <div class="modal" id="education-modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Pendidikan</h2>
+      </div>
+    </div>
+    <div class="modal" id="contact-modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Kontak</h2>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+
+
+
+
+
 
 
   <!-- info -->
@@ -152,7 +179,7 @@
       <div class="col">
         <h2>Pontianak</h2>
         <p>
-          <span style="font-size: 18px; font-weight: bold;">ALAN SUNGAI RAYA DALAM KOMPLEK VILLA KENCANA NO.
+          <span style="font-size: 18px; font-weight: bold;">JALAN SUNGAI RAYA DALAM KOMPLEK VILLA KENCANA NO.
             B12A,</span><br>
           <span style="font-size: 16px;">Bangka Belitung Darat, Pontianak barat, Kota</span><br>
           <span style="font-size: 16px;">Pontianak, Kalimantan Barat 78111</span>
@@ -180,7 +207,7 @@
           <span style="font-size: 12px;">Gusti Muhammad Adzaky</span>
         </div>
         <div class="rights">
-          <span style="font-size: 12px;">&#169; Gusti Muhammad Adzaky All Right Reserved.</span>
+          <span style="font-size: 12px;">&#169; Gusti Muhammad Adzaky All Right Reserved 2024</span>
         </div>
         <div class="social">
           <a href="https://github.com/GustiMuhammadAdzaky"><i data-feather="github"></i></a>
@@ -190,6 +217,10 @@
       </div>
     </footer>
   </section>
+
+
+
+
 
 </body>
 <script src="js/script.js"></script>

@@ -8,11 +8,7 @@ hamburgerMenu.addEventListener("click", function (e) {
 
 // jika menekan yang bukan dari sidebar, maka tombol active akan hilang
 document.addEventListener("click", function (e) {
-  // -> berfungsi untuk keluar dari sidebar
-
-  //   jika user tidak menekan hamburgermenu, dan tidak menekan salahsatu dari navbarNav(yang ada pada media resolusi tertentu) maka :
   if (!hamburgerMenu.contains(e.target) && !navbarNav.contains(e.target)) {
-    // hapus class active pada navbarNav
     navbarNav.classList.remove("active");
   }
 });
@@ -84,20 +80,96 @@ document.addEventListener("click", function (e) {
   }
 });
 
+//  Modal
+// Tambahkan skrip berikut untuk menangani masalah scrolling dan menampilkan modal
+
 document.addEventListener("DOMContentLoaded", function () {
-  const items = document.querySelectorAll(".item");
+  const aboutLink = document.getElementById("about");
+  const educationLink = document.getElementById("education");
+  const contactLink = document.getElementById("contact");
+  const modals = document.querySelectorAll(".modal");
 
-  items.forEach((item) => {
-    const img = item.querySelector("img");
-    const overlay = item.querySelector(".overlay");
+  function showModal(modal) {
+    modal.style.display = "block"; // Tampilkan modal
+    modal.offsetHeight; // Force browser to process styling
+    modal.classList.add("show"); // Tambahkan kelas show
 
-    img.addEventListener("load", function () {
-      overlay.classList.remove("loading");
+    // Tambahkan event listener untuk menutup modal saat transisi selesai
+    modal.addEventListener(
+      "transitionend",
+      function modalTransitionEndListener(event) {
+        if (
+          event.propertyName === "opacity" &&
+          modal.classList.contains("show")
+        ) {
+          // Hapus event listener agar tidak dipicu lagi
+          modal.removeEventListener(
+            "transitionend",
+            modalTransitionEndListener
+          );
+        }
+      }
+    );
+  }
+
+  function hideModals() {
+    modals.forEach((modal) => {
+      modal.classList.remove("show"); // Hapus kelas show dari semua modal
+
+      // Tambahkan event listener untuk menyembunyikan modal setelah transisi selesai
+      modal.addEventListener(
+        "transitionend",
+        function modalTransitionEndListener(event) {
+          if (
+            event.propertyName === "opacity" &&
+            !modal.classList.contains("show")
+          ) {
+            modal.style.display = "none"; // Sembunyikan modal setelah transisi selesai
+            // Hapus event listener agar tidak dipicu lagi
+            modal.removeEventListener(
+              "transitionend",
+              modalTransitionEndListener
+            );
+          }
+        }
+      );
     });
+  }
 
-    img.addEventListener("error", function () {
-      overlay.classList.remove("loading");
-      overlay.innerHTML = "Error loading image"; // Teks alternatif jika gambar gagal dimuat
+  // Tambahkan event listener untuk masing-masing tautan navbar
+  aboutLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    hideModals(); // Sembunyikan semua modal sebelum menampilkan modal yang baru
+    showModal(document.getElementById("about-modal"));
+    navbarNav.classList.remove("active");
+  });
+
+  educationLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    hideModals(); // Sembunyikan semua modal sebelum menampilkan modal yang baru
+    showModal(document.getElementById("education-modal"));
+    navbarNav.classList.remove("active");
+  });
+
+  contactLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    hideModals(); // Sembunyikan semua modal sebelum menampilkan modal yang baru
+    showModal(document.getElementById("contact-modal"));
+    navbarNav.classList.remove("active");
+  });
+
+  // Tambahkan event listener untuk tombol close di setiap modal
+  document.querySelectorAll(".close").forEach((closeButton) => {
+    closeButton.addEventListener("click", () => {
+      const modal = closeButton.closest(".modal");
+      hideModals(); // Sembunyikan modal saat tombol close ditekan
     });
+  });
+
+  // Tambahkan event listener untuk menutup modal saat klik di luar area modal
+  window.addEventListener("click", (event) => {
+    if (event.target.classList.contains("modal")) {
+      hideModals(); // Sembunyikan modal saat area luar modal ditekan
+    }
   });
 });
