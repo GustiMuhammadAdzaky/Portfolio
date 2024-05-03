@@ -367,9 +367,11 @@ section.info .container .col p span {
 }
 
 /* modal */
+
 /* Sisipkan gaya CSS ini untuk menampilkan modal */
 /* Tambahkan transisi untuk modal */
 
+/* Default styles */
 .modal {
   display: none;
   position: fixed;
@@ -381,24 +383,47 @@ section.info .container .col p span {
   overflow: auto;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Transisi untuk opacity */
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 20% auto;
-  padding: 20px;
-  border: 1px solid #d2d2d2;
-  width: 80%;
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 40px;
   border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 80%;
   transform: translateY(-50px);
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Transisi untuk transform dan opacity */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: var(--primary);
+  font-size: 32px;
+}
+
+.modal-content p,
+.modal-content ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.modal-content ul {
+  padding-left: 20px;
+}
+
+.modal-content li {
+  list-style-type: disc;
 }
 
 .modal.show {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.3s ease, visibility 0s linear 0s; /* Transisi untuk opacity */
+  transition: opacity 0.3s ease, visibility 0s linear 0s;
 }
 
 .modal.show .modal-content {
@@ -406,16 +431,16 @@ section.info .container .col p span {
 }
 
 .close {
-  color: #aaa;
+  color: #555;
   float: right;
-  font-size: 28px;
+  font-size: 36px;
   font-weight: bold;
-  transition: color 0.3s ease; /* Transisi untuk warna tombol close */
+  transition: color 0.3s ease;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: red;
   text-decoration: none;
   cursor: pointer;
 }
@@ -425,6 +450,10 @@ section.info .container .col p span {
 @media (max-width: 1141px) {
   html {
     font-size: 85%;
+  }
+
+  .modal-content {
+    width: 90%;
   }
 
   .navbar-nav a {
@@ -493,6 +522,9 @@ section.info .container .col p span {
     font-size: 62.5%;
   }
 
+  .modal-content {
+    width: 95%;
+  }
   /* .navbar {
     justify-content: flex-start;
   } */
@@ -594,6 +626,11 @@ section.info .container .col p span {
 @media (max-width: 450px) {
   html {
     font-size: 55%;
+  }
+
+  .modal-content {
+    width: 100%;
+    padding: 20px;
   }
 
   .logo img,
