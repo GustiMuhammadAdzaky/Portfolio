@@ -178,9 +178,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const btnContainer = document.querySelector(".button-container");
 btnContainer.addEventListener("click", function () {
-  let nomor = "089691789422";
+  let nomor = "+6289691789422";
   let spasi = "%20";
-  let text = `Halo${spasi}, Dzaky${spasi}saya${spasi}ingin${spasi}...`;
+  let text = `Halo${spasi}, Dzaky${spasi}saya${spasi}mendapatkan${spasi}kontak${spasi}anda${spasi}dari${spasi}portfolio${spasi}anda${spasi}, saya${spasi}ingin${spasi}...`;
   let rangkaiKata = `https://wa.me/${nomor}?text=${text}`;
   location.href = rangkaiKata;
 });
