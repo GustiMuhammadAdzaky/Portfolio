@@ -4,6 +4,10 @@ let navbarNav = document.querySelector(".navbar-nav");
 hamburgerMenu.addEventListener("click", function (e) {
   navbarNav.classList.toggle("active");
   e.preventDefault(); // Menahan perilaku default dari tautan
+  let modal = document.querySelectorAll("#modal-container .modal");
+  modal.forEach(function (item) {
+    item.classList.remove("show");
+  });
 });
 
 // jika menekan yang bukan dari sidebar, maka tombol active akan hilang
@@ -81,8 +85,6 @@ document.addEventListener("click", function (e) {
 });
 
 //  Modal
-// Tambahkan skrip berikut untuk menangani masalah scrolling dan menampilkan modal
-
 document.addEventListener("DOMContentLoaded", function () {
   const aboutLink = document.getElementById("about");
   const educationLink = document.getElementById("education");
@@ -172,4 +174,13 @@ document.addEventListener("DOMContentLoaded", function () {
       hideModals(); // Sembunyikan modal saat area luar modal ditekan
     }
   });
+});
+
+const btnContainer = document.querySelector(".button-container");
+btnContainer.addEventListener("click", function () {
+  let nomor = "089691789422";
+  let spasi = "%20";
+  let text = `Halo${spasi}, Dzaky${spasi}saya${spasi}ingin${spasi}...`;
+  let rangkaiKata = `https://wa.me/${nomor}?text=${text}`;
+  location.href = rangkaiKata;
 });
