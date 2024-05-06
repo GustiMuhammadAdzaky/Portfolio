@@ -482,6 +482,16 @@ section.info .container .col p span {
     color: #05afaa;
   }
 
+  .navbar .navbar-nav button {
+    /* padding: 10px; */
+    padding: 0;
+    border: solid 0.5px;
+    /* border-radius: 5px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative; /* Atau relative */
+  }
+
   /* main */
   .container {
     flex-direction: column;
@@ -564,7 +574,8 @@ section.info .container .col p span {
     right: 0;
   }
 
-  .navbar .navbar-nav a {
+  .navbar .navbar-nav a,
+  .navbar .navbar-nav button {
     color: #4a748b;
     display: block;
     margin: 1.5rem;
