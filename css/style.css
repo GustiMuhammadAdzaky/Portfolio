@@ -81,6 +81,19 @@ body {
   border-bottom: solid 2px #05afaa;
 }
 
+.navbar .navbar-nav button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f4cd0c;
+  cursor: pointer;
+  border: none;
+}
+
+.navbar .navbar-nav button:hover {
+  border-radius: 10px;
+  background-color: #d9b809;
+}
+
 .navbar .navbar-extra {
   margin-left: auto;
 }
