@@ -94,6 +94,13 @@ body {
   background-color: #d9b809;
 }
 
+.navbar .navbar-nav select.cv{
+  padding: 5px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0);
+}
+
+
 .navbar .navbar-extra {
   margin-left: auto;
 }
@@ -575,13 +582,14 @@ section.info .container .col p span {
   }
 
   .navbar .navbar-nav a,
-  .navbar .navbar-nav button {
+  .navbar .navbar-nav button, .navbar .navbar-nav select.cv{
     color: #4a748b;
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
     font-size: small;
   }
+    
 
   #hamburger-menu {
     display: inline-block;

@@ -21,9 +21,23 @@
       <a href="#" id="about">Tentang Saya</a>
       <a href="#" id="education">Pendidikan</a>
       <a href="#" id="contact">Kontak</a>
-      <form action="cv.pdf" style="display: inline;">
+      <!-- <form action="cv.pdf" style="display: inline;">
         <button type="submit">Download Cv</button>
-      </form>
+      </form> -->
+      <select class="cv" onchange="redirectToCV(this.value)">
+        <option value="#">Pilih CV:</option>
+        <option value="cv.pdf">CV Keseluruhan</option>
+        <option value="cv_linkedin.pdf">CV LinkedIn</option>
+      </select>
+      
+      <script>
+        function redirectToCV(cvLink) {
+          if (cvLink !== "#") {
+            window.location.href = cvLink;
+          }
+        }
+      </script>
+      
     </div>
     <div class="navbar-extra">
       <a href="#" id="hamburger-menu"><i data-feather="align-right"></i></a>
